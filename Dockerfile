@@ -1,4 +1,8 @@
 FROM python:3.10
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - \
+  && apt-get update -qq \
+  && apt-get install -y nodejs
+
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
