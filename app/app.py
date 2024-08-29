@@ -9,7 +9,7 @@ def hello(name=None):
 
 @app.route('/')
 def index():
-    return '初デプロイです！！'
+    return render_template('base.html')
 
 @app.errorhandler(404)
 def not_found(error):
