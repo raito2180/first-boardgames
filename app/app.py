@@ -9,7 +9,15 @@ def hello(name=None):
 
 @app.route('/')
 def index():
-    return render_template('base.html')
+    return render_template('top.html')
+
+@app.route('/right/')
+def right():
+    return render_template('right.html')
+
+@app.route('/heavy/')
+def heavy():
+    return render_template('heavy.html')
 
 @app.errorhandler(404)
 def not_found(error):

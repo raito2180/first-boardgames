@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Otsutome';
+    src: url('/static/fonts/Otsutome.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Otsutome', sans-serif;
+}

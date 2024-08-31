@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <div>
+        <div class="flex justify-center items-center mt-36 mb-10">
+            <div class="w-60 h-60">
+                <img src="{{url_for('static',filename='images/hatsubodo.png')}}">
+            </div> 
+        </div>
+        <div class="flex justify-center items-center">
+            <span class="text-red-500 text-2xl font-bold">初心者向けボドゲ紹介アプリ</span>
+        </div>
+        <div class="flex justify-center items-center mb-10">
+            <span class="text-red-500 text-2xl font-bold">気になる方を押してね</span>
+        </div>
+        <div class="flex justify-center items-center mb-10">
+            <button type="button" class="w-36 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
+                <a href="{{ url_for('right') }}">軽ゲー</a>
+            </button>
+            <button type="button" class="w-36 text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
+                <a href="{{ url_for('heavy') }}">重ゲー</a>
+            </button>
+        </div>
+    </div>            
+{% endblock %}
