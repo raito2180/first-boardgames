@@ -1,3 +1,5 @@
+import json
+import random
 from flask import Flask,render_template,make_response
 
 app = Flask(__name__)
@@ -13,7 +15,12 @@ def index():
 
 @app.route('/right/')
 def right():
-    return render_template('right.html')
+    right_games = "data/rightgame.json"
+    with open(right_games, 'r') as file:
+        right_games_data = json.load(file)
+    games_list = right_games_data["games"]
+    game_data = random.choice(games_list)
+    return render_template('right.html', right_game=game_data)
 
 @app.route('/heavy/')
 def heavy():
