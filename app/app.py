@@ -13,18 +13,32 @@ def hello(name=None):
 def index():
     return render_template('top.html')
 
-@app.route('/right/')
-def right():
-    right_games = "data/rightgame.json"
-    with open(right_games, 'r') as file:
-        right_games_data = json.load(file)
-    games_list = right_games_data["games"]
-    game_data = random.choice(games_list)
-    return render_template('right.html', right_game=game_data)
+@app.route('/match/')
+def match():
+    match_games = "data/match.json"
+    with open(match_games, 'r') as file:
+        match_games_data = json.load(file)
+    match_games_list = match_games_data["games"]
+    match_game_data = random.choice(match_games_list)
+    return render_template('game.html', game=match_game_data)
 
-@app.route('/heavy/')
-def heavy():
-    return render_template('heavy.html')
+@app.route('/middle/')
+def middle():
+    middle_games = "data/middle.json"
+    with open(middle_games, 'r') as file:
+        middle_games_data = json.load(file)
+    middle_games_list = middle_games_data["games"]
+    middle_game_data = random.choice(middle_games_list)
+    return render_template('game.html', game=middle_game_data)
+
+@app.route('/many/')
+def many():
+    many_games = "data/many.json"
+    with open(many_games, 'r') as file:
+        many_games_data = json.load(file)
+    many_games_list = many_games_data["games"]
+    many_game_data = random.choice(many_games_list)
+    return render_template('game.html', game=many_game_data)
 
 @app.errorhandler(404)
 def not_found(error):

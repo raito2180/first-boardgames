@@ -1,0 +1,19 @@
+{
+    "games": [
+    {
+      "name": "ガイスター～Geister～",
+      "numberofpeople": "2人",
+      "genre": "駆け引き対戦ゲーム",
+      "content": "良いオバケと悪いオバケを操作して、相手の良いオバケを全て取るか、良いオバケを相手に送り込むと勝利！反対に悪いオバケを全て取られたら負け！",
+      "point": "駆け引きが楽しいオバケ対戦ゲーム",
+      "url":"https://bodoge.hoobby.net/games/geister"
+    },
+    {
+      "name": "街コロ",
+      "numberofpeople": "2人～4人",
+      "genre": "ダイス拡大再生産ゲーム",
+      "content": "サイコロを振って施設を買い効率よく収入を得ていくゲーム！先に4つのランドマークを完成させた人が勝利",
+      "point": "サイコロで楽しく街作り！優しい世界観で楽しもう",
+      "url":"https://bodoge.hoobby.net/games/miniville"
+    }]
+}
