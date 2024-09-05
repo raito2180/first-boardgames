@@ -40,6 +40,14 @@ def many():
     many_game_data = random.choice(many_games_list)
     return render_template('game.html', game=many_game_data)
 
+@app.route('/vision/')
+def vision():
+    profile_path = "data/profile.json"
+    with open(profile_path, 'r') as file:
+        profile_data = json.load(file)
+    profile = profile_data["profile"]
+    return render_template('vision.html', profile=profile)
+
 @app.errorhandler(404)
 def not_found(error):
     # render_template() で生成したレスポンスボディを、make_response() で
