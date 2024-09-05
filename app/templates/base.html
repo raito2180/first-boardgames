@@ -5,7 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>はつボド</title>
+    <meta property="og:title" content="{{ ogp_data.title }}">
+    <meta property="og:description" content="{{ ogp_data.description }}">
+    <meta property="og:image" content="{{ ogp_data.image }}">
+    <meta property="og:url" content="{{ ogp_data.url }}">
+    <meta property="og:type" content="website">
+
+    <!-- Optional: Twitter Card support -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="はつボド-{{ ogp_data.title }}">
+    <meta name="twitter:description" content="{{ ogp_data.description }}">
+    <meta name="twitter:image" content="{{ ogp_data.image }}">
+
+    <title>はつボド-{{ ogp_data.title }}</title>
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='src/Otsutome.css')}}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
