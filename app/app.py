@@ -4,16 +4,11 @@ from flask import Flask,render_template,make_response, url_for
 
 app = Flask(__name__)
 
-@app.route('/hello/')
-@app.route('/hello/<name>/')
-def hello(name=None):
-    return render_template('hello.html',person=name)
-
 @app.route('/')
 def index():
     ogp_data = {
         'title': 'TOP',
-        'description': 'TOPページです.',
+        'description': 'ボドゲを始めるのに間違いないゲームをご紹介しています♪',
         'image': url_for('static', filename='images/ogp.png', _external=True),
         'url': url_for('index', _external=True)
     }
@@ -23,7 +18,7 @@ def index():
 def match():
     ogp_data = {
         'title': '対戦用ボドゲ',
-        'description': '対戦用ボドゲのおすすめページです.',
+        'description': '対戦用ボドゲのおすすめページです。',
         'image': url_for('static', filename='images/ogp.png', _external=True),
         'url': url_for('match', _external=True)
     }
@@ -38,7 +33,7 @@ def match():
 def middle():
     ogp_data = {
         'title': '2~4人用ボドゲ',
-        'description': '2~4人用ボドゲのおすすめページです.',
+        'description': '2~4人用ボドゲのおすすめページです。',
         'image': url_for('static', filename='images/ogp.png', _external=True),
         'url': url_for('middle', _external=True)
     }
@@ -53,7 +48,7 @@ def middle():
 def many():
     ogp_data = {
         'title': '大人数用ボドゲ',
-        'description': '大人数用ボドゲのおすすめページです.',
+        'description': '大人数用ボドゲのおすすめページです。',
         'image': url_for('static', filename='images/ogp.png', _external=True),
         'url': url_for('many', _external=True)
     }
@@ -68,7 +63,7 @@ def many():
 def vision():
     ogp_data = {
         'title': '作者紹介',
-        'description': '作者紹介ページです.',
+        'description': '作者を紹介しています。安心してアプリを使用する参考にしてください♪',
         'image': url_for('static', filename='images/ogp.png', _external=True),
         'url': url_for('vision', _external=True)
     }
@@ -77,6 +72,26 @@ def vision():
         profile_data = json.load(file)
     profile = profile_data["profile"]
     return render_template('vision.html', profile=profile, ogp_data=ogp_data)
+
+@app.route('/qr/')
+def qr():
+    ogp_data = {
+        'title': 'QRコード',
+        'description': 'サイトのQRコードです。共有の際にご使用ください！',
+        'image': url_for('static', filename='images/ogp.png', _external=True),
+        'url': url_for('qr', _external=True)
+    }
+    return render_template('qr.html', ogp_data=ogp_data)
+
+@app.route('/contact/')
+def contact():
+    ogp_data = {
+        'title': 'お問い合わせ',
+        'description': '何かあればお気軽にお問い合わせください♪',
+        'image': url_for('static', filename='images/ogp.png', _external=True),
+        'url': url_for('contact', _external=True)
+    }
+    return render_template('contact.html', ogp_data=ogp_data)
 
 @app.errorhandler(404)
 def not_found(error):

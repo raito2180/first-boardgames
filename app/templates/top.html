@@ -8,21 +8,25 @@
             </div> 
         </div>
         <div class="flex justify-center items-center">
-            <span class="text-red-500 text-2xl font-bold">初心者向けボドゲを紹介</span>
+            <span class="text-red-500 text-2xl font-bold">初心者向けボドゲを紹介！</span>
         </div>
         <div class="flex justify-center items-center mb-10">
-            <span class="text-red-500 text-2xl font-bold">プレイしたい人数を選択してください</span>
+            <span class="text-red-500 text-2xl font-bold">プレイ人数を選択してね</span>
         </div>
         <div class="flex flex-col justify-center items-center mb-10">
             <!--<button type="button" class="w-36 mb-2 text-white bg-gray-600  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
                 <a class="block" href="#">2人(解放未定)</a>
             </button> -->
+            <span>↓じっくり白熱</span>
             <button type="button" class="w-36 mb-2 text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
                 <a class="block" href="{{ url_for('middle') }}">2～5人</a>
             </button>
-            <button type="button" class="w-36 mb-2 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
-                <a class="block" href="{{ url_for('many') }}">大人数用</a>
-            </button>
+            <span class="mt-2">↓皆で盛り上がる</span>
+            <div>
+                <button type="button" class="w-36 mb-2 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
+                    <a class="block" href="{{ url_for('many') }}">大人数用</a>
+                </button>
+            </div>
         </div>
     </div>            
 {% endblock %}
